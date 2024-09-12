@@ -1,0 +1,15 @@
+# Node modules directory
+node_modules/
+
+# Environment variables file
+config.env
+
+# Package lock file (optional)
+package-lock.json
+
+# IDE/editor specific files
+.eslintrc.json
+.prettierrc
+
+# macOS system file (if applicable)
+.DS_Store
