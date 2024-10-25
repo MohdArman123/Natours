@@ -4,7 +4,7 @@
   "description": "Learning node, express and mongodb",
   "main": "app.js",
   "scripts": {
-    "start:dev": "cross-env nodemon server.js",
+    "start": "cross-env nodemon server.js",
     "start:prod": "cross-env NODE_ENV=production nodemon server.js"
   },
   "author": "Mohd Arman",
@@ -12,6 +12,7 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "mongoose": "^5.13.22",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
@@ -25,5 +26,8 @@
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.35.2",
     "prettier": "^3.3.3"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   }
 }

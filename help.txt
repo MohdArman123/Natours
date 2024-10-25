@@ -1,0 +1,18 @@
+npm i mongoose@5 
+
+To store data from file in database collection through script:
+In terminal: 
+
+For importing : node dev-data/data/import-dev-data.js --import
+for deleting : node dev-data/data/import-dev-data.js --delete
+
+
+
+//Advance filtering
+127.0.0.1:3000/api/v1/tours?duration[gte]=5&difficulty=easy&price[lt]=1500
+//Sorting
+127.0.0.1:3000/api/v1/tours?sort=price,ratingsAverage
+// field limiting
+127.0.0.1:3000/api/v1/tours?fields=name, duration, difficulty, price
+//paging
+127.0.0.1:3000/api/v1/tours?page=4&limit=3
