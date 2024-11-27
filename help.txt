@@ -16,3 +16,12 @@ for deleting : node dev-data/data/import-dev-data.js --delete
 127.0.0.1:3000/api/v1/tours?fields=name, duration, difficulty, price
 //paging
 127.0.0.1:3000/api/v1/tours?page=4&limit=3
+//Aliasing
+127.0.0.1:3000/api/v1/tours?limit=5&sort=-ratingsAverage, price
+
+
+//Debugging
+npm i ndb --save-dev
+npm i ndb --global
+
+npm run debug
