@@ -25,3 +25,7 @@ npm i ndb --save-dev
 npm i ndb --global
 
 npm run debug
+
+
+DATABASE=mongodb+srv://armansheakh987:<PASSWORD>@cluster0.6dbbgnt.mongodb.net/natours?retryWrites=true&w=majority&appName=Cluster0
+DATABASE_PASSWORD=A1a2a3a4

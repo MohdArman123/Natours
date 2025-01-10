@@ -16,11 +16,11 @@ if (process.env.NODE_ENV === 'development') {
 
 // MIDDLEWARE :  Parses the incoming JSON request body and makes it available as req.body
 app.use(express.json());
-
 app.use(express.static(`${__dirname}/public`));
 
 app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
+  // console.log(req.headers);
   next();
 });
 

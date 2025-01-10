@@ -9,6 +9,9 @@ const router = express.Router();
 router.post('/signup', authController.signup);
 router.post('/login', authController.login);
 
+router.post('/forgotPassword', authController.forgotPassword); // recieve email address
+router.post('/resetPassword/:token', authController.resetPassword); // recieve the token and new password
+
 router
   .route('/')
   .get(userController.getAllUsers)
