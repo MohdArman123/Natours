@@ -10,7 +10,26 @@ router.post('/signup', authController.signup);
 router.post('/login', authController.login);
 
 router.post('/forgotPassword', authController.forgotPassword); // recieve email address
-router.post('/resetPassword/:token', authController.resetPassword); // recieve the token and new password
+router.patch('/resetPassword/:token', authController.resetPassword); // recieve the token and new password
+
+// Protect All routes after this middleware
+router.use(authController.protect);
+
+router.patch(
+  '/updateMyPassword',
+
+  authController.updatePassword,
+);
+router.get(
+  '/me',
+
+  userController.getMe,
+  userController.getUser,
+);
+router.patch('/updateMe', userController.updateMe);
+router.delete('/deleteMe', userController.deleteMe);
+
+router.use(authController.restrictTo('admin'));
 
 router
   .route('/')

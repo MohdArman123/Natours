@@ -29,3 +29,30 @@ npm run debug
 
 DATABASE=mongodb+srv://armansheakh987:<PASSWORD>@cluster0.6dbbgnt.mongodb.net/natours?retryWrites=true&w=majority&appName=Cluster0
 DATABASE_PASSWORD=A1a2a3a4
+
+aap.js
+```
+143-Rate LImit
+
+144-SETTING SECURITY HTTP HEADERS
+helmet: collection of middleware
+helmet helps you secure your Express apps by setting various HTTP headers
+npm i helmet
+helment github - documentation
+
+145-Data Sanitization: means to clean all the data that comes into the application from malicious code
+(the code that is trying to attack our application)
+Trying to defend two attacks
+malicious query injection allow login only knowing password:
+Postman Login:
+"email": { "$gt": "" } it will allow us to Login 
+mongodb compass : { "email": { "$gt": "" },}  return all of the user without email 
+
+To PROTECT these install: npm i express-mongo-sanitize
+nmp i xss-clean
+```
+
+Nested Routes
+POST /tour/23456f/reviews
+GET /tour/23456f/reviews
+GET /tour/2344f5/reviews/00889da
